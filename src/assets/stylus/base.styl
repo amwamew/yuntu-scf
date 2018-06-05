@@ -1,0 +1,355 @@
+@import "./variable.styl"
+
+// 整体样式
+html,body
+  background: $color-gray-ef
+.container
+  position: absolute
+  top: 76px
+  right: 0
+  bottom: 36px
+  left: 0
+  overflow: hidden
+.home
+  height: 100%
+  position: relative
+  .el-row, .el-col
+    height: 100%
+  //首页搜索小按钮
+  .el-input-group__append
+    padding-left: 18px
+    padding-right: 10px
+  //首页tab选项卡
+  .el-radio-group
+    width: 100%
+    .el-radio-button
+      width: 25%
+  .el-radio-button--small
+    .el-radio-button__inner
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+
+//顶部导航下方区域
+.content-left
+  width: 225px
+  height: 100%
+  float: left
+  background: $color-white
+  overflow-y: auto
+.content-right
+  margin-left: 240px
+  padding: 15px
+  height: 100%
+  background: $color-white
+
+//分页
+.paging
+  height: 32px
+  padding: 10px 0
+  overflow: hidden
+  .right
+    .el-pagination
+      float right
+  .center
+    text-align: center
+    .el-pagination
+      display: inline
+
+
+//switch按钮
+.switch
+  .is-checked
+    .el-switch__label--left
+      display: none
+    .el-switch__label--right
+      display: block
+  .el-switch__label
+    margin-right: 0
+    position: absolute
+    z-index: 9
+    color: #fff
+  .el-switch__label--left
+    right: 6px
+  .el-switch__label--right
+    left: 6px
+    margin-left: 0
+    display: none
+  .el-switch__label *
+    font-size: 12px
+//表格样式调整
+.el-table
+  .el-table__header
+    tr
+      th
+        background: $color-gray-F9F9F9
+        color: $color-black
+  
+// 面包屑导航
+.breadCrumb,.el-breadcrumb
+  height: 26px
+  .el-breadcrumb__item
+    font-size: 16px
+    .el-breadcrumb__inner
+      line-height: 26px
+      font-weight: 900
+      &:hover
+        font-weight: 900
+
+//面包屑导航下方搜索区域
+.search-area
+  padding: 15px 0
+  .inline-block
+    font-size: 14px
+
+//表格小标签样式
+span.span-color
+  color: $color-white
+  padding: 3px 15px
+  border-radius: 3px
+span.span-color-red
+  background: $color-red
+span.span-color-yellow
+  background: $color-yellow
+span.span-color-green
+  background: $color-green
+
+//左侧导航上方的select
+.menu-top-select
+  padding: 15px
+  background: $color-dfe8ed
+  .company
+    margin-top: 15px
+  
+
+//审批人员鼠标悬停的信息
+.small-info
+  p
+    line-height: 30px
+
+// 表格操作icon样式
+table
+  [class^="icon-"]
+    font-size: 14px
+    padding-right: 2px
+
+//弹窗中的用户信息
+.my-dialog
+  .user-info
+    margin-bottom: 30px
+    .el-form-item
+      width: 40%
+      margin-bottom: 0
+  .el-form-item
+    margin-bottom: 5px
+
+//弹窗样式微调
+.el-dialog
+  .el-dialog__body
+    padding: 10px 20px
+
+//合同上传样式
+.upload-contract
+  .el-upload
+    width: 148px
+    height 148px
+    border: 1px dashed #d9d9d9
+    border-radius: 6px
+    cursor: pointer
+    position: relative
+    overflow: hidden
+    i
+      font-size: 28px
+      color: #8c939d
+      width: 148px
+      height: @width
+      line-height: @width
+      text-align: center
+
+//企业信息折叠
+.enterprise
+  .el-collapse-item__header
+    padding: 0 40px
+  .el-collapse-item__content
+    padding-left: 40px
+    padding-right: 40px
+  .el-collapse-item__header
+    font-weight: 700
+.no-padding-collapse
+  .el-collapse-item__header
+    padding: 0
+  .el-collapse-item__content
+    padding: 0
+
+
+//表格
+.my-table
+  width: 100%
+  td,th
+    border: 1px solid $color-table-border
+    padding: 15px
+    font-size: 13px
+    color: $color-black-2
+    vertical-align: middle
+
+.tabs-content
+  width: 100%
+  position: absolute
+  top: 252px
+  bottom: 0
+  overflow: auto
+  background: $color-white
+
+.flag-items
+  .item
+    padding: 20px
+    margin-bottom: 20px
+    border: 1px solid $color-table-border
+    .item-title
+      span
+        font-size: 14px
+      .flag
+        width: 100px
+        line-height: 24px
+        color: $color-white
+        background: $color-blue
+        text-align: center
+        margin-left: -26px
+        margin-right: 15px
+        display: inline-block
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          left: 0
+          bottom: -6px
+          width: 0
+          height: 0
+          display: inline-block
+          border: 3px solid $color-blue
+          border-color: $color-blue $color-blue transparent transparent
+      .title
+        color: $color-blue
+        cursor: pointer
+      .detail
+        float: right
+        cursor: pointer
+        color: $color-blue
+        i
+          transition: .2s
+      .active
+        i
+          transform: rotate(180deg)
+  ul
+    overflow: hidden
+    li
+      width: 33.33%
+      float: left
+      margin-top: 20px
+.flag-items-dialog
+  .dropdown-menu
+    display: inline-block
+  .el-dropdown-link
+    color: $color-blue
+.el-dropdown-menu
+  .menu-img
+    padding-left: 70px
+    background: url(../images/icon-img.png) no-repeat 20px 6px
+    background-size: 27px
+  .menu-2
+    background-position-y: -27px
+  .menu-3
+    background-position-y: -59px
+  .menu-4
+    background-position-y: -91px
+  .menu-5
+    background-position-y: -123px
+  .menu-6
+    background-position-y: -155px
+  .menu-7
+    background-position-y: -187px
+// 头部样式
+// .top-menu
+//   float: left
+//   .el-menu--horizontal
+//     border-bottom: 0 none
+//     .is-active
+//       border-bottom: 0 none
+//   .el-submenu,.el-menu-item
+//     position: relative
+//     width: 120px
+//     background: $color-blue !important
+//     transition: all .5s
+//     &:hover
+//       background: $color-dark-blue !important
+//     .el-submenu__title
+//       height: 70px
+//       line-height: 100px
+//       text-align: center
+//       background: $color-blue !important
+//     .home,.system-set,.business,.count,.risk
+//       position: absolute
+//       width: 100%
+//       left: 0
+//       height: 42px
+//     .home
+//       background: url('../../assets/images/home.png') no-repeat center
+//     .system-set
+//       background: url('../../assets/images/system-set.png') no-repeat center
+//     .business
+//       background: url('../../assets/images/business.png') no-repeat center
+//     .count
+//       background: url('../../assets/images/count.png') no-repeat center
+//     .risk
+//       background: url('../../assets/images/risk.png') no-repeat center
+//     .el-submenu__icon-arrow
+//       display: none
+//   .el-menu-item
+//     height: 70px
+//     line-height: 100px
+//     text-align: center
+//   .is-active
+//     background: $color-dark-blue !important
+//     .el-submenu__title
+//       background: $color-dark-blue !important
+//       border-bottom: 0 none !important
+// .el-menu--horizontal
+//     .el-menu--popup
+//       .el-menu-item
+//         color: $color-black !important
+//         &:hover
+//           background: $color-blue !important
+//           color: $color-white !important
+//       .is-active
+//         background: $color-blue !important
+//         color: $color-white !important
+    
+
+// // 左侧菜单
+// .left-menu
+//   width 226px
+//   .el-menu
+//     .is-opened
+//       .el-submenu__title
+//         background: #0089d1 !important
+//         color: $color-white !important
+//         .icon-img,.el-submenu__icon-arrow
+//           color: $color-white
+        
+
+.shadow-box
+    background-color: #fff
+    box-shadow: 0 2px 10px 1px #CCC
+
+// 切换动画
+@keyframes fadeUp
+  from
+    opacity: 0
+    transform: translate3d(0, 15px, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+.fade-up-enter-active
+  animation-duration: .8s
+  animation-fill-mode: both
+  animation-name: fadeUp
